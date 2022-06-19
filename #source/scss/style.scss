@@ -3,7 +3,7 @@
 // Шрифт
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @font-face {
-	font-family: CalSans;
+	font-family: 'CalSans';
 	font-display: swap;
 	src: url('/fonts/CalSans-SemiBold.woff2') format('woff2'), url('/fonts/CalSans-SemiBold.woff') format('woff');
 	font-weight: 400;
@@ -22,6 +22,9 @@ body {
 }
 .page {
 	flex: 1 1 auto ;
+		&__main {
+
+			}
 }
 [class*="__container"]{
 	max-width: 1230px;
@@ -32,9 +35,15 @@ body {
 /***********************HEADER************************/
 
 .header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
 
 		&__container {
-			padding: 5px inherit;
+			padding-top: 5px;
+			padding-bottom: 5px;
 			display: flex;
 			gap: 131px;
 			align-items: center;
@@ -48,10 +57,14 @@ body {
 		}
 }
 .menu {
-
+	padding:10px 15px 10px 0px;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.7);
 		&__list {
 			display: flex;
-			gap: 56px;
+			column-gap: 56px;
+			row-gap: 10px;
+			flex-wrap: wrap;
 		}
 
 		&__item {
@@ -66,5 +79,190 @@ body {
 			text-shadow: #FF6428 0px 0px 10px;
 			transition: all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55) 0s;
 		}
+}
+@media (max-width: 1092px){
+	.header {
+		&__container {
+			gap: 50px;
+			min-height: 100px;
+		}
+	}
+	.menu{
+		&__list {
+			gap: 40px;
+		}
+	}
+}
+@media (max-width: 767.98px){
+	.header {
+		&__container {
+			min-height: 65px;
+		}
+	}
+}
+@media (max-width: 479.98px){
+	.header {
+		&__container {
+			gap: 20px;
+		}
+		&__logo {
+			width: 28px;
+			flex: 0 0 28px;
+			overflow: hidden;
+		}
+	}
+	.menu{
+		padding: 0 0 0 0;
+		&__list {
+			column-gap: 15px;
+		}
+	}
+}
+
+/********************MAIN******************/
+
+
+.main {
+	padding-bottom: 80px;
+		&__container {
+			display: flex;
+		}
+
+		&__content {
+			flex: 0 1 50%;
+			align-self: flex-end;
+			padding: 120px 20px 60px 0;
+		}
+
+		&__title {
+			font-family: 'CalSans';
+			font-size: 56px;
+			line-height: 1.2;
+			color: #121212;
+			span{
+				color: #FF6428;
+			}
+			&:not(:last-child){
+				margin-bottom: 16px;
+			}
+		}
+
+		&__text {
+			font-style: normal;
+			font-weight: 500;
+			max-width: 370px;
+			&:not(:last-child){
+				margin-bottom: 31px;
+			}
+		}
+
+		&__actions {
+		}
+
+		&__decor {
+			flex: 0 1 50%;
+		}
+		
+		&__image {
+			display: inline-block;
+			position: relative;
+			margin-right: -135px;
+			img{
+				max-width: 672px;
+			}
+			&::after{
+				content: "";
+				background: url('/img/mein/decor.svg') 0 0 no-repeat;
+				width: 80px;
+				height: 80px;
+				right: 36.3%;
+				bottom: 0;
+				transform: translate(0,50%);
+				position: absolute;
+			}
+		}
+}
+.actions-main {
+	display: flex;
+	align-items: center;
+		&__button {
+			text-align: center;
+			padding: 18.5px 48px;
+			background: #FF6428;
+			border-radius: 40px;
+			color: #FFFFFF;
+			line-height: 28px;
+			font-weight: 600;
+			transition: all 0.3s ease 0s;
+			&:not(:last-child){
+				margin-right: 40px;
+			}
+			&:hover{
+				background: #dd5726;
+			}
+		}
+
+		&__icon {
+			&:not(:last-child){
+				margin-right: 27px;
+			}
+		}
+}
+
+@media (max-width: 1092px){
+	.main {
+		&__image{
+			img{
+				width: 100%;
+			}
+		}
+		&__content {
+			flex: 0 0 60%;
+			padding-bottom: 0;
+		}
+		&__decor {
+			flex: 0 0 40%;
+		}
+	}
+}
+@media (max-width: 767.98px){
+	.main {
+		&__image{
+			
+			img{
+				
+			}
+		}
+		&__content {
+			flex: 1 1 100%;
+			padding-right: 0;
+			padding-top: 80px;
+		}
+		&__decor {
+			display: none;
+		}
+		&__title {
+			font-size: 44px;
+		}
+	}
+}
+@media (max-width: 479.98px){
+	.actions-main {
+		flex-wrap: wrap;
+		justify-content: center;
+		&__button {
+			flex: 1 1 100%;
+			&:not(:last-child){
+				margin-right: 0;
+				margin-bottom: 15px;
+			}
+		}
+
+		&__icon {
+			&:not(:last-child){
+
+			}
+		}
+}
 }
 
