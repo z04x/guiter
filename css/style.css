@@ -4,7 +4,9 @@
 * {
   padding: 0;
   margin: 0;
-  border: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *, *:before, *:after {
@@ -27,6 +29,7 @@ nav, footer, header, aside {
 html, body {
   height: 100%;
   width: 100%;
+  min-width: 320px;
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
@@ -74,3 +77,72 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+@font-face {
+  font-family: CalSans;
+  font-display: swap;
+  src: url("/fonts/CalSans-SemiBold.woff2") format("woff2"), url("/fonts/CalSans-SemiBold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Poppins', sans-serif;
+  color: #666666;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+[class*="__container"] {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+/***********************HEADER************************/
+.header__container {
+  padding: 5px inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 131px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 152px;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 56px;
+}
+
+.menu__link {
+  font-style: normal;
+  font-weight: 500;
+  color: rgba(18, 18, 18, 0.4);
+}
+
+.menu__link:hover {
+  text-shadow: #FF6428 0px 0px 10px;
+  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+}
