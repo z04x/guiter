@@ -223,7 +223,7 @@ body {
 }
 
 .main__title {
-  font-family: 'CalSans';
+  font-family: 'CalSans', sans-serif;
   font-size: 56px;
   line-height: 1.2;
   color: #121212;
