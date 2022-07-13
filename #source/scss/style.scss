@@ -845,24 +845,18 @@ body {
 		}
 		&__title {
 			font-size: 38px;
+			text-align: center;
 			&:not(:last-child){
 				margin-bottom: 25px;
 			}
 		}
 	}
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
 	.favorite {
 		padding-bottom: 30px;
-		&__container {
-			flex-direction: column;
-		}
 		&__title {
-			font-size: 38px;
 			text-align: center;
-			&:not(:last-child){
-				margin-bottom: 25px;
-			}
 		}
 	}
 	.app-favorite {
@@ -870,3 +864,115 @@ body {
 	justify-content: center;
 	}
 }
+
+/********************** FOOTER ******************/
+
+.footer {
+	background: #eee;
+	padding-top: 80px;
+	padding-bottom: 40px;
+
+		&__copy {
+			text-align: center;
+			padding-top: 20px;
+		}
+}
+.body-footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	gap: 50px;
+
+		&__column-full{
+			flex: 1 1 auto;
+		}
+		&__logo {
+			display: inline-block;
+			
+			&:not(:last-child){
+				margin-bottom: 28px;
+			}
+		}
+}
+.contacts-footer {
+		&__item {
+			&:not(:last-child){
+				margin-bottom: 28px;
+			}
+		}
+
+		&__link {
+			display: inline-block;
+			line-height: 24px;
+			padding-left: 44px;
+			color: #666666;
+		}
+
+		&__link-mail {
+			background: url('/img/footer/sms.svg') left no-repeat;
+		}
+
+		&__link-location {
+			background: url('/img/footer/location.svg') left no-repeat;
+		}
+}
+.menu-footer {
+	display: flex;
+	gap: 30px;
+	justify-content: center;
+		&__column {
+			justify-content: center;
+			align-items: center;
+
+		}
+
+		&__title {
+			text-transform: uppercase;
+			color: #121212;
+			font-size: 18px;
+			line-height: 27px;
+			margin-bottom: 20px;
+			font-weight: 600;
+		}
+
+		&__link {
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 24px;
+			color: rgba(18, 18, 18, 0.6);
+
+		}
+}
+.social-footer {
+	margin-bottom: 55px;
+		&__title {
+			text-transform: uppercase;
+			color: #121212;
+			font-size: 18px;
+			line-height: 27px;
+			margin-bottom: 12px;
+			font-weight: 600;
+		}
+
+		&__items {
+			display: flex;
+			justify-content: space-between;
+			gap: 50px;
+			align-items: center;
+		}
+
+}
+
+@media (max-width: 767.98px){
+	.body-footer{
+		&__logo{
+			display: block;
+		}
+	}
+}
+
+
