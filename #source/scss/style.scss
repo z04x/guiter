@@ -3,9 +3,9 @@
 // Шрифт
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @font-face {
-	font-family: CalSans;
+	font-family: 'CalSans', sans-serif;
 	font-display: swap;
-	src: url('/fonts/CalSans-SemiBold.woff2') format('woff2'), url('/fonts/CalSans-SemiBold.woff') format('woff');
+	src: url('fonts/CalSans-SemiBold.woff2') format('woff2'), url('fonts/CalSans-SemiBold.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -31,7 +31,7 @@ body {
 /***********************______************************/
 
 .title{
-	font-family: 'CalSans';
+	font-family: 'CalSans', sans-serif;
 	color: #121212;
 	font-size: 44px;
 	text-align: center;
